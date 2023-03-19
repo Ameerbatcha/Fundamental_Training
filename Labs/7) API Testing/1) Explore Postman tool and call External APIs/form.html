@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+
+    <form id="formid" autocomplete="on">
+
+        <label for="name">User Name</label><br>
+        <input type="text" placeholder="Username" id="name" name="name"> <br><br>
+
+        <label for="email_id">Email</label><br>
+        <input type="email" id="email_id" name="email_id"><br><br>
+
+        <label for="passwd">Password</label><br>
+        <input type="password" id="passwd" name="passwd"><br><br>
+
+        <button type="submit" id="btnsubmit" >Submit</button>
+
+    </form>
+
+    <script>
+        let submit = document.getElementById("btnsubmit");
+        let name = document.getElementById("name");
+        let passwd = document.getElementById("passwd");
+        let emailid = document.getElementById("email_id");
+        
+        submit.addEventListener('click', function(e ){
+            e.preventDefault()
+            var data = { name: name.value, passwd: passwd.value, emailid: emailid.value }
+            console.log(data)
+
+            //Writing code to send data through a  pi
+            fetch('http://localhost:3000/logindiff', {  
+                mode:"no-cors",
+                method: 'post', 
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body:data 
+            }).then(res => res.text()).then(res => console.log(res))
+
+        })
+    </script>
+</body>
+
+</html>

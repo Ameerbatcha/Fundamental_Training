@@ -1,0 +1,21 @@
+.keys {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3px;
+}
+ #cc{
+    grid-column : -1;
+    justify-self: end;
+
+}
+
+.container {
+    width: 150px;
+}
+#header{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:rgb(33, 209, 225);
+}
+.firstbox{
+    margin-bottom: 5px;
+}

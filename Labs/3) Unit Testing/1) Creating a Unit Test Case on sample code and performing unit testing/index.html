@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="calc.css">
+    <link rel="icon" href="calcicon.jfif" type="image">
+    <title>Calculator</title>
+</head>
+
+<body>
+
+    <h1 id="header">Calculator</h1>
+
+    <div class="container">
+
+        <div class="firstbox">
+            <input type="text" id="operationer">
+        </div>
+
+        <div>
+            <label for="calci_type">Type of Calculator</label>
+            <br>
+            <input type="radio" value="scientific" name="calci_type">scientific <br>
+            <input type="radio" value="standard" name="calci_type">standard
+        </div>
+        <br>
+
+        <div class="keys">
+            <button onclick="operation('1')">1</button>
+            <button onclick="operation('2')">2</button>
+            <button onclick="operation('3')">3</button>
+            <button onclick="operation('4')">4</button>
+            <button onclick="operation('5')">5</button>
+            <button onclick="operation('6')">6</button>
+            <button onclick="operation('7')">7</button>
+            <button onclick="operation('8')">8</button>
+            <button onclick="operation('9')">9</button>
+            <button onclick="operation('0')">0</button>
+
+            <button onclick="decideoperation('+')">+</button>
+            <button onclick="decideoperation('-')">-</button>
+            <button onclick="decideoperation('x')">x</button>
+            <button onclick="decideoperation('/')">/</button>
+            <button onclick="decideoperation('%')">%</button>
+            <button onclick="equals()">=</button>
+            <button  onclick="clearscreen()" id="cc">CC</button>
+
+
+        </div>
+
+    </div>
+
+    <script src="clac.js" type="text/javascript"></script>
+
+</body>
+
+</html>

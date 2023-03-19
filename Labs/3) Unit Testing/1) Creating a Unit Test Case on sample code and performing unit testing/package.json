@@ -1,0 +1,19 @@
+{
+  "name": "calcpackg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "clac.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "text-encoding": "^0.7.0"
+  },
+  "jest": {
+    "testEnvironment": "jest-environment-jsdom"
+  }
+}
